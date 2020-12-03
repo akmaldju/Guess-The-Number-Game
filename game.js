@@ -1,30 +1,31 @@
-var number = 0;
-var ok;
-function startGame() {
+let number = 0;
+let ok;
+
+const startGame = () => {
 	$('#dialog').text('Hello, I want to play a game with you...');
 	setTimeout(intro1, 3000);
 	return false;
 }
-function intro1() {
+const intro1 = () => {
 	$('#dialog').text('The rules are simple: I have a number in mind and you need to guess which number it is');
 	setTimeout(intro2, 5000);
 	number = Math.floor(Math.random() * 1000) + 1;
 	// console.log(number);
 	return false;
 }
-function intro2() {
+const intro2 = () => {
 	$('#dialog').text('Every time you say a wrong number I will tell you if your number is bigger or smaller than mine');
 	setTimeout(intro3, 7000);
 	return false;
 }
-function intro3() {
+const intro3 = () => {
 	$('#dialog').text('So, let us start');
 	return false;
 }
 $(document).ready(function () {
 	startGame();
 	ok = $('#button');
-	ok.click(function () {
+	ok.click(() => {
 		// console.log('Click');
 		// console.log($('#answer'));
 		let userGuess = $('#answer').val();
