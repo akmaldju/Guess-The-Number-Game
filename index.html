@@ -20,14 +20,26 @@
 
     <title>Guess the number!</title>
   </head>
-  <body>
-    <main>
-      <content>
-        <p id="dialog">Loading...</p>
+  <body class="d-flex w-100 h-screen bg-cadetblue">
+    <main class="d-flex f-column jc-center bg-floralwhite b-round m-auto">
+      <content class="d-flex h-70 bg-black p-4">
+        <p id="dialog" class="bold t-lawngreen t-center t-25-px italic m-auto">
+          Loading...
+        </p>
       </content>
-      <div id="input">
-        <input type="text" name="answer" id="answer" />
-        <a href="#" id="button">OK!</a>
+      <div id="input" class="d-flex jc-space-between w-90 p-1 m-auto">
+        <input
+          type="text"
+          name="answer"
+          id="answer"
+          class="form-control bg-lightgrey bold t-15-pt t-forestgreen italic w-75 py-1 my-auto"
+        />
+        <a
+          href="#"
+          id="button"
+          class="btn btn-forestgreen hover-pulse b-material noline t-floralwhite my-auto"
+          >OK!</a
+        >
       </div>
     </main>
   </body>
